@@ -37,24 +37,30 @@ namespace GameOfLife
                 Console.Clear();
                 StatusUpdate(p);
                 Console.WriteLine("deez");
-                Thread.Sleep(2000);
-                e.RandomEvent(p);
+                //Thread.Sleep(2000);
+                e.EventPicker(p);
+
+                Console.WriteLine("press button to continue");
+                Console.ReadLine();
 
             } while (p.isAlive);
+            Console.WriteLine("dead");
             return;
         }
 
         static void StatusUpdate(Player p)
         {
-                            
+            //TODO make a status display that shows Name, age and status of character;
+            Console.WriteLine("Age: " + p.age + "\n");
+            Console.WriteLine("status: " + p.status + "\n");
         }
         static void SaveScore()
         {
-
+            //save highscores in a json file
         }
         static void PlayAgain()
         {
-
+            //get the choise to play again
         }
     }
     

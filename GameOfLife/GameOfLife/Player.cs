@@ -7,9 +7,7 @@ namespace GameOfLife
         public int? age { get; set; }
         public string? status { get; set; }
         public bool isAlive { get; set; }
-        #region non diplayed values
-        public int? villainry { get; set; }
-        public string[]? handicaps { get; set; }
-        #endregion
+        public int? villainry { get; set; } //Sort of a karma level determining the chances of something bad heppening to you. Anonymous to player 0 = good. 5 = bad
+        public List<string>? handicaps { get; set; } = new();  
     }
 }

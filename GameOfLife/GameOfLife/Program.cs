@@ -34,13 +34,11 @@ namespace GameOfLife
             Events e = new();
             do
             {
+                //TODO maybe do a function that sets player age foreach "level"/"age gap"
                 Console.Clear();
                 StatusUpdate(p);
-                Console.WriteLine("deez");
-                //Thread.Sleep(2000);
                 e.EventPicker(p);
-
-                Console.WriteLine("press button to continue");
+                Console.WriteLine("\npress button to continue");
                 Console.ReadLine();
 
             } while (p.isAlive);
@@ -50,9 +48,20 @@ namespace GameOfLife
 
         static void StatusUpdate(Player p)
         {
-            //TODO make a status display that shows Name, age and status of character;
-            Console.WriteLine("Age: " + p.age + "\n");
+            Console.WriteLine($"Villainry: {p.villainry} IsAlive: {p.isAlive} Handicaps: ");
+            if(p.handicaps != null)
+            {
+                foreach (string s in p.handicaps)
+                {
+                    Console.Write($"{s}, ");
+                }
+            }
+            
+
+            Console.WriteLine("\nName: " + p.name);
+            Console.WriteLine("Age: " + p.age + "");
             Console.WriteLine("status: " + p.status + "\n");
+            
         }
         static void SaveScore()
         {

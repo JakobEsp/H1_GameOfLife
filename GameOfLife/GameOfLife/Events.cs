@@ -6,7 +6,7 @@ namespace GameOfLife
         Random rnd = new();
         public void EventPicker(Player p)
         {
-            //TODO Inside cases do a random event.
+            //TODO Make a random event picker inside some cases.
             switch (p.age)
             {
                 case < 5:
@@ -31,6 +31,7 @@ namespace GameOfLife
                 case > 80:
                     break;      
             }
+            //TODO make an aging funktion. that ages the player for every event if(isAlive).
             return;
             
         }

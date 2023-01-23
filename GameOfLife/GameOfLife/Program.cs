@@ -34,7 +34,6 @@ namespace GameOfLife
             Events e = new();
             do
             {
-                //TODO maybe do a function that sets player age foreach "level"/"age gap"
                 Console.Clear();
                 StatusUpdate(p);
                 e.EventPicker(p);
@@ -57,7 +56,6 @@ namespace GameOfLife
                 }
             }
             
-
             Console.WriteLine("\nName: " + p.name);
             Console.WriteLine("Age: " + p.age + "");
             Console.WriteLine("status: " + p.status + "\n");
